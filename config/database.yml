@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: skill_review_production
-  username: skill_review
-  password: <%= ENV['SKILL_REVIEW_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
