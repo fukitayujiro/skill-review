@@ -1,12 +1,17 @@
-<h1>工事中</h1>
 <div class="contents row">
   <% @contents.each do |content| %>
-    <div class="content_post" style="background-image: url(<%= content.image %>);">
+    <div class="content_post">
+    <%= image_tag content.image.variant(resize:'250x250'), class: 'message-image' if content.image.attached? %>
       <p><%= content.title %></p>
-      <span class="median-point">
-        <%# <%= content.point %> %>
-        <%# メッセージ評価の中央値をいれる %>
+      <span class="name">
+        評価：<%= content.introduction %>
       </span>
     </div>
   <% end %>
+  <div class='post-btn'>
+  <span class='post-btn-text'>投稿する</span>
+  <%= link_to new_content_path do %>
+    <%= image_tag 'camera.png' , size: '185x50' ,class: "post-btn-icon" %>
+  <% end %>
+  </div>
 </div>
