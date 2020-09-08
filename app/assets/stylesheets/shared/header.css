@@ -10,17 +10,22 @@
 
 
 .title {
-  font-size: 35px;
+  font-size: 40px;
   font-family: Impact,Charcoal;
-  width: 90%;
+  width: 800px;
   color: rgb(13, 71, 231);
-  padding: 20px 0 0 30px;
+  padding: 10px 0 0 30px;
   text-decoration: none;
 }
 
+.explain{
+  font-size: 15px;
+  color: black;
+}
+
 .menu {
-  width: 30%;
-  padding: 30px 40px 20px 20px ;
+  width: 45%;
+  padding: 30px 40px 20px 200px ;
 }
 
 
@@ -31,24 +36,32 @@
   justify-content: space-around;
 }
 
+.concept {
+  text-decoration: none;
+  color: #333333;
+  margin-right: 5px;
+}
 
 .user-nickname {
   text-decoration: none;
   color: #333333;
-  font-weight: bold;
+  margin-right: 5px;
 }
 
 .logout {
   text-decoration: none;
   color: #333333;
+  margin-right: 5px;
 }
 
 .login {
   text-decoration: none;
   color: #333333;
+  margin-right: 5px;
 }
 
 .sign-up {
   text-decoration: none;
   color: #333333;
+  margin-right: 5px;
 }

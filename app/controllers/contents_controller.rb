@@ -19,9 +19,19 @@ class ContentsController < ApplicationController
     end
   end
 
+  def show
+    @content = Content.find(params[:id])
+  end
+
+  def destroy
+    content = Content.find(params[:id])
+    content.destroy
+    redirect_to root_path
+  end
+
   private
   def content_params
-    params.require(:content).permit(:title, :media_id, :genre_id, :introduction, :url, :image)
+    params.require(:content).permit(:title, :media_id, :genre_id, :introduction, :url, :image).merge(user_id: current_user.id)
   end
 
   def move_to_index

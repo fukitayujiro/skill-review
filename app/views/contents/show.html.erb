@@ -1,0 +1,16 @@
+<div class="contents">
+  <div class="content_post">
+    <%= image_tag @content.image, class: 'content-image' if @content.image.attached? %>
+      <div class="data" >
+        <ul class="name">
+         <li><%= @content.title %></li>
+         <li><%= @content.introduction %></li>
+        </ul>
+    </div>
+  </div>
+  <div class="edit-destroy-btn">
+  <%= link_to '商品の編集', edit_content_path(@content.id) , method: :get, class: "content-edit" %>
+      <p class='or-text'>or</p>
+  <%= link_to '削除', content_path(@content.id), method: :delete, class:'content-destroy' %>
+  </div>
+</div>

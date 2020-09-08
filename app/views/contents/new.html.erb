@@ -1,82 +1,54 @@
-<div class="items-sell-main">
-    <h2 class="items-sell-title">投稿画面</h2>
-    <%= form_with model: @content, url: contents_path, local: true do |f| %>
+<div class="posting-contents">
+  <h2 class="post-title">投稿画面</h2>
+  <%= form_with model: @content, url: contents_path, local: true do |f| %>
 
-    <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
-    <%# render 'shared/error_messages', model: f.object %>
-    <%# //インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
+  <div class="bold-text">
+        1.イメージ画像
+  </div>
+  <div class="click-upload">
+    <%= f.file_field :image, id:"image" %>
+  </div>
 
-    <%# 出品画像 %>
-    <div class="img-upload">
-      <div class="weight-bold-text">
-        イメージ画像
-      </div>
-      <div class="click-upload">
-        <p>
-          クリックしてファイルをアップロード
-        </p>
-        <%= f.file_field :image, id:"item-image" %>
-      </div>
+  <div class="form">
+    <div class="bold-text">
+      2.タイトル
+      <span class="indispensable">必須</span>
     </div>
-    <%# /出品画像 %>
-    <%# 商品名と商品説明 %>
-    <div class="new-items">
-      <div class="weight-bold-text">
-        タイトル
+    <%= f.text_area :title, class:"title-text", id:"title-name", placeholder:"タイトル", maxlength:"40" %>
+    <div class="items-explain">
+      <div class="bold-text">
+        3.内容の説明
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :title, class:"title-text", id:"title-name", placeholder:"タイトル", maxlength:"40" %>
-      <div class="items-explain">
-        <div class="weight-bold-text">
-          内容の説明
-          <span class="indispensable">必須</span>
-        </div>
-        <%= f.text_area :introduction, class:"intro-text", id:"intro-info", placeholder:"内容の説明（必須 1,000文字まで）身についた内容、良かった点、気になる点、注意点など" ,rows:"7" ,maxlength:"1000" %>
-      </div>
+      <%= f.text_area :introduction, class:"intro-text", id:"intro-info", placeholder:"内容の説明（必須 1,000文字まで）身についた内容、良かった点、気になる点、注意点など" ,rows:"7" ,maxlength:"1000" %>
+    </div>
     <div class="url">
-      <div class="weight-bold-text">
-        url
+      <div class="bold-text">
+        4.url
       </div>
       <%= f.text_area :url, class:"title-text", id:"url-name", placeholder:"URLを貼り付けて下さい。", maxlength:"400" %>
     </div>
-    <%# /商品名と商品説明 %>
 
-    <%# 商品の詳細 %>
     <div class="items-detail">
-      <div class="weight-bold-text">商品の詳細</div>
       <div class="form">
-        <div class="weight-bold-text">
-          媒体
+        <div class="bold-text">
+          5.媒体
           <span class="indispensable">必須</span>
         </div>
-        <%= f.collection_select(:medium_id, Medium.all, :id, :name, {class:"select-box", id:"item-category"}) %>
-        <div class="weight-bold-text">
-          ジャンル
+        <%= f.collection_select(:medium_id, Medium.all, :id, :name, {class:"select-box", id:"medium"}) %>
+        <div class="bold-text">
+          6.ジャンル
           <span class="indispensable">必須</span>
         </div>
-        <%= f.collection_select(:genre_id, Genre.all, :id, :name, {class:"select-box", id:"item-sales-status"}) %>
+        <%= f.collection_select(:genre_id, Genre.all, :id, :name, {class:"select-box", id:"genre"}) %>
       </div>
     </div>
-    <%# /商品の詳細 %>
 
-    <%# 下部ボタン %>
-    <div class="sell-btn-contents">
-      <%= f.submit "投稿する" ,class:"sell-btn" %>
+    <div class="btn-contents">
+      <%= f.submit "投稿する" ,class:"postbtn" %>
       <%=link_to 'もどる', root_path, class:"back-btn" %>
     </div>
-    <%# /下部ボタン %>
+    
   </div>
   <% end %>
-
-  <footer class="items-sell-footer">
-    <ul class="menu">
-      <li><a href="#">プライバシーポリシー</a></li>
-      <li><a href="#">フリマ利用規約</a></li>
-      <li><a href="#">特定商取引に関する表記</a></li>
-    </ul>
-    <%= link_to image_tag('furima-logo-color.png' , size: '185x50'), "/" %>
-    <p class="inc">
-      ©︎Furima,Inc.
-    </p>
-  </footer>
 </div>
