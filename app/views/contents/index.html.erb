@@ -1,4 +1,4 @@
-<div class="contents row">
+<div class="contents">
   <% @contents.each do |content| %>
     <div class="content_post">
     <%= image_tag content.image.variant(resize:'250x250'), class: 'message-image' if content.image.attached? %>

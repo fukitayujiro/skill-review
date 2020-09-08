@@ -21,7 +21,7 @@
 | introduction   | string | null: false |
 | image   | string | null: false |
 | url   | string | null: false |
-| user_id   | regerences | null: false, foreign_key: true|
+| user_id   | references | null: false, foreign_key: true|
 | judge   | integer | null: false |
 
 ### Association
