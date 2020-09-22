@@ -24,7 +24,7 @@
     コメント：テスト
   </div>
   <div class="edit-destroy-btn">
-    <% if user_signed_in? && current_user.id == @item.user_id %>
+    <% if user_signed_in? && current_user.id == @content.user_id %>
       <%= link_to '内容を編集する', edit_content_path(@content.id) , method: :get, class: "content-edit" %>
       <%= link_to '削除する', content_path(@content.id), method: :delete, class:'content-destroy' %>
     <% else %>
