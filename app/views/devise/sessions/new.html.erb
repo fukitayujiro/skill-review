@@ -1,27 +1,27 @@
-<div class="contents row">
-  <div class="container">
-    <h2>Log in</h2>
+<div class="login__form">
+    <h2 class="login__form--title">ログイン</h2>
     <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
       <div class="field">
-        <%= f.label :email %><br />
+        <label class="login__form--text">メールアドレス</label>
+        <span class="indispensable">必須</span><br />
         <%= f.email_field :email, autofocus: true %>
       </div>
 
       <div class="field">
-        <%= f.label :password %><br />
+        <label class="login__form--text">パスワード</label>
+        <span class="indispensable">必須</span><br />
         <%= f.password_field :password, autocomplete: "off" %>
       </div>
 
       <% if devise_mapping.rememberable? %>
         <div class="field">
-          <%= f.label :remember_me %><br />
+          <label class="login__form--text">保存する</label><br />
           <%= f.check_box :remember_me %>
         </div>
       <% end -%>
 
       <div class="actions">
-        <%= f.submit "Log in" %>
+        <%= f.submit "ログイン" %>
       </div>
     <% end %>
-  </div>
 </div>

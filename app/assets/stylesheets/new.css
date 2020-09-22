@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(235, 232, 232);
+  background-color: rgb(252, 249, 249);
 }
 
 .bold-text {
@@ -86,8 +86,8 @@
 }
 
 .postbtn {
-  background: #ec7455;
-  border: 1px solid #ec7455;
+  background: rgb(13, 71, 231);
+  border: 1px solid rgb(13, 71, 231);
   color: #fff;
   padding: 15px 35%;
   height: 50px;

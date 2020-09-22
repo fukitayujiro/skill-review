@@ -1,16 +1,34 @@
-<div class="contents">
+<div class="show-contents">
   <div class="content_post">
-    <%= image_tag @content.image, class: 'content-image' if @content.image.attached? %>
-      <div class="data" >
-        <ul class="name">
-         <li><%= @content.title %></li>
-         <li><%= @content.introduction %></li>
+    <div class="content_image">
+      <%= image_tag @content.image if @content.image.attached? %>
+    </div>
+    <div class="data" >
+        <ul class="data-lists">
+         <li class="content-title">タイトル：<%= @content.title %></li>
+         <li class="content-introduction">紹介文：<%= @content.introduction %></li>
         </ul>
     </div>
   </div>
+  <div class="show-comments">
+    <h2>投稿されたコメントと評価(テスト)</h2>
+  </div>
+  <div class="show-comments--test">
+    ニックネーム：テスト1さん<br>
+    評価：5<br>
+    コメント：テスト
+  </div>
+  <div class="show-comments--test">
+    ニックネーム：テスト2さん<br>
+    評価：4<br>
+    コメント：テスト
+  </div>
   <div class="edit-destroy-btn">
-  <%= link_to '商品の編集', edit_content_path(@content.id) , method: :get, class: "content-edit" %>
-      <p class='or-text'>or</p>
-  <%= link_to '削除', content_path(@content.id), method: :delete, class:'content-destroy' %>
+    <% if user_signed_in? && current_user.id == @item.user_id %>
+      <%= link_to '内容を編集する', edit_content_path(@content.id) , method: :get, class: "content-edit" %>
+      <%= link_to '削除する', content_path(@content.id), method: :delete, class:'content-destroy' %>
+    <% else %>
+      <%= link_to '口コミを書いてみる(工事中)', "/" ,class:"content-review"%>
+    <% end %>
   </div>
 </div>
