@@ -1,6 +1,6 @@
 <div class="posting-contents">
-  <h2 class="post-title">投稿画面</h2>
-  <%= form_with model: @content, url: contents_path, local: true do |f| %>
+  <h2 class="post-title">編集画面</h2>
+  <%= form_with model: @content, url: content_path, local: true do |f| %>
 
   <div class="bold-text">
         1.イメージ画像
@@ -45,7 +45,7 @@
     </div>
 
     <div class="btn-contents">
-      <%= f.submit "投稿する" ,class:"postbtn" %>
+      <%= f.submit "編集する" ,class:"postbtn" %>
       <%=link_to 'もどる', root_path, class:"back-btn" %>
     </div>
     

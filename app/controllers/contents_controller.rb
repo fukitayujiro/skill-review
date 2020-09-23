@@ -29,6 +29,16 @@ class ContentsController < ApplicationController
     redirect_to root_path
   end
 
+  def edit
+    @content = Content.find(params[:id])
+  end
+
+  def update
+    content = Content.find(params[:id])
+    content.update(content_params)
+    redirect_to content_path
+  end
+
   private
   def content_params
     params.require(:content).permit(:title, :media_id, :genre_id, :introduction, :url, :image).merge(user_id: current_user.id)
