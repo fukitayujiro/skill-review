@@ -1,34 +1,50 @@
-<div class="show-contents">
+<div class="showcontents">
   <div class="content_post">
     <div class="content_image">
       <%= image_tag @content.image if @content.image.attached? %>
     </div>
-    <div class="data" >
         <ul class="data-lists">
-         <li class="content-title">タイトル：<%= @content.title %></li>
-         <li class="content-introduction">紹介文：<%= @content.introduction %></li>
+          <li class="content-title">タイトル：<%= @content.title %></li>
+          <li class="content-averagepoint">評価：<%= @aves %></li>
+          <li class="content-introduction">紹介文：<%= @content.introduction %></li>
         </ul>
-    </div>
   </div>
-  <div class="show-comments">
-    <h2>投稿されたコメントと評価(テスト)</h2>
+  <p class="showcontent__catalog"><strong>口コミ投稿一覧(テスト)</strong></p>
+  <div class="showcomments__views">
+  <% if @messages %>
+    <% @messages.each do |message| %>
+      <div class="showcomments__view">
+        <p>名前：<%= message.user.name%></p>
+        <p>点数：<%= message.point %></p>
+        <p>本文：<%= message.text %></p>
+      </div><br>
+    <% end %>
   </div>
-  <div class="show-comments--test">
-    ニックネーム：テスト1さん<br>
-    評価：5<br>
-    コメント：テスト
-  </div>
-  <div class="show-comments--test">
-    ニックネーム：テスト2さん<br>
-    評価：4<br>
-    コメント：テスト
-  </div>
+  <% end %>
   <div class="edit-destroy-btn">
     <% if user_signed_in? && current_user.id == @content.user_id %>
       <%= link_to '内容を編集する', edit_content_path(@content.id) , method: :get, class: "content-edit" %>
       <%= link_to '削除する', content_path(@content.id), method: :delete, class:'content-destroy' %>
+    <% end %>
+  </div>
+  <div class="showcontent__reviews">
+    <% if current_user %>
+      <%= form_with model: [@content,@message], local: true do |form| %>
+        <div class="bold-text">
+          1.評価(5点満点)
+          <span class="indispensable">必須</span>
+        </div>
+        <%= form.select :point, [["選択して下さい", "選択して下さい"],["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"]], placeholder:"選択して下さい" %>
+        <br>
+        <div class="bold-text">
+          2.本文
+          <span class="indispensable">必須</span>
+        </div>
+        <%= form.text_area :text, class:"review-text", id:"review-text", placeholder:"学べたこと、良かった点、気になる点など(1000字まで)",rows:"7" , maxlength:"1000" %><br>
+        <%= form.submit "コメントする",class:"postbtn" %>
+      <% end %>
     <% else %>
-      <%= link_to '口コミを書いてみる(工事中)', "/" ,class:"content-review"%>
+      <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
     <% end %>
   </div>
 </div>

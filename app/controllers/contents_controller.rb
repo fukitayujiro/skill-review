@@ -21,6 +21,15 @@ class ContentsController < ApplicationController
 
   def show
     @content = Content.find(params[:id])
+    @message = Message.new
+    @messages = @content.messages.includes(:user)
+    array = []
+    sum = 0
+    @messages.each do |message|
+      sum += message.point
+      array << message.point
+    end
+    @aves = sum / array.length
   end
 
   def destroy

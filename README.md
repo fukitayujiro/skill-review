@@ -34,8 +34,7 @@
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
 | point | integer     | null: false|
-| strength | text     | null: false|
-| weekness | text     | null: false|
+| text | text     | null: false|
 | user_id    | references | null: false, foreign_key: true |
 | content_id    | references | null: false, foreign_key: true |
 
