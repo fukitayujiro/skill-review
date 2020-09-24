@@ -1,4 +1,5 @@
-## アプリ名：Skillup-Navi
+## アプリ名
+Skillup-Navi
 
 ## 概要
 ビジネススキル総合レビューサイト
