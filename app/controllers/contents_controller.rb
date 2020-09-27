@@ -30,6 +30,8 @@ class ContentsController < ApplicationController
       array << message.point
     end
     @aves = sum / array.length
+    rescue ZeroDivisionError
+      0
   end
 
   def destroy

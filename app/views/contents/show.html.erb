@@ -5,7 +5,11 @@
     </div>
         <ul class="data-lists">
           <li class="content-title">タイトル：<%= @content.title %></li>
-          <li class="content-averagepoint">評価：<%= @aves %></li>
+          <% if @messages.present?%>
+            <li class="content-averagepoint">評価：<%= @aves %></li>
+          <% else %>
+            <li class="content-averagepoint">評価：--</li>
+          <% end %>
           <li class="content-introduction">紹介文：<%= @content.introduction %></li>
         </ul>
   </div>
