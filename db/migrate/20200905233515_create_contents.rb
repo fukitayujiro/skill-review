@@ -6,7 +6,7 @@ class CreateContents < ActiveRecord::Migration[6.0]
       t.integer :genre_id
       t.string :introduction
       t.string :url
-      t.integer :user_id
+      t.references :user,  foreign_key: true
       t.integer :judge
       t.timestamps
     end

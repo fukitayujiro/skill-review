@@ -13,7 +13,7 @@
           <li class="content-introduction">紹介文：<%= @content.introduction %></li>
         </ul>
   </div>
-  <p class="showcontent__catalog"><strong>口コミ投稿一覧(テスト)</strong></p>
+  <p class="showcontent__catalog"><strong>口コミ投稿一覧</strong></p>
   <div class="showcomments__views">
   <% if @messages %>
     <% @messages.each do |message| %>
@@ -32,7 +32,7 @@
     <% end %>
   </div>
   <div class="showcontent__reviews">
-    <% if current_user %>
+    <% if user_signed_in? && current_user.id != @content.user_id %>
       <%= form_with model: [@content,@message], local: true do |form| %>
         <div class="bold-text">
           1.評価(5点満点)

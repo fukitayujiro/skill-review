@@ -10,9 +10,9 @@ class ContentsController < ApplicationController
   end
 
   def create
-    @content = Content.create(content_params)
-    if @content.valid?
-      @content.save
+    binding.pry
+    content = Content.new(content_params)
+    if content.save!
       redirect_to root_path
     else
       render :new
@@ -52,7 +52,7 @@ class ContentsController < ApplicationController
 
   private
   def content_params
-    params.require(:content).permit(:title, :media_id, :genre_id, :introduction, :url, :image).merge(user_id: current_user.id)
+    params.require(:content).permit(:image, :title, :media_id, :genre_id, :introduction, :url ).merge(user_id: current_user.id)
   end
 
   def move_to_index
