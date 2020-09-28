@@ -1,3 +1,7 @@
+<div class="wrapper">
+
+  <%= render "shared/sidebar"%>
+
 <div class="posting-contents">
   <h2 class="post-title">編集画面</h2>
   <%= form_with model: @content, url: content_path, local: true do |f| %>
@@ -51,4 +55,6 @@
     
   </div>
   <% end %>
+</div>
+
 </div>
