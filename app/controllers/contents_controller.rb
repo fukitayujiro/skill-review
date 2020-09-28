@@ -10,13 +10,12 @@ class ContentsController < ApplicationController
   end
 
   def create
-    binding.pry
     content = Content.new(content_params)
-    if content.save!
+    if content.save
       redirect_to root_path
     else
       render :new
-    end
+    end_
   end
 
   def show
