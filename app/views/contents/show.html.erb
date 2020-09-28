@@ -1,7 +1,11 @@
+<div class="wrapper">
+
+<%= render "shared/sidebar"%>
+
 <div class="showcontents">
   <div class="content_post">
     <div class="content_image">
-      <%= image_tag @content.image if @content.image.attached? %>
+      <%= image_tag @content.image %>
     </div>
         <ul class="data-lists">
           <li class="content-title">タイトル：<%= @content.title %></li>
@@ -51,4 +55,6 @@
       <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
     <% end %>
   </div>
+</div>
+
 </div>
