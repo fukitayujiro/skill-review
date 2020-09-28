@@ -1,3 +1,7 @@
+<div class="wrapper">
+
+<%= render "shared/sidebar"%>
+
 <div class="login__form">
     <h2 class="login__form--title">ログイン</h2>
     <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
@@ -24,4 +28,6 @@
         <%= f.submit "ログイン" %>
       </div>
     <% end %>
+</div>
+
 </div>
