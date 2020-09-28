@@ -3,6 +3,7 @@
   height: calc(100% - 70px);
   background-color: rgb(252, 249, 249);
   padding: 40px 0;
+  width: calc(100vw - 250px);
 }
 
 .content_post{
