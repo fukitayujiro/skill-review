@@ -5,4 +5,13 @@ class Content < ApplicationRecord
   has_one_attached :image
   belongs_to :user, optional: true
   has_many :messages
+
+  def self.search(search)
+    if search != ""
+      Content.where('text LIKE(?)', "%#{search}%")
+    else
+      Content.all
+    end
+  end
+
 end
