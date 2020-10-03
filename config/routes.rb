@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: "contents#index"
   resources :contents do
     resources :messages
-    menber do
+    member do
       get 'search'
     end
   end
