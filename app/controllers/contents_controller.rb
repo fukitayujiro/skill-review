@@ -49,6 +49,10 @@ class ContentsController < ApplicationController
     redirect_to content_path
   end
 
+  def search
+    @search = Content.search(params[:media_id, :genre_id])
+  end
+
   private
   def content_params
     params.require(:content).permit(:image, :title, :media_id, :genre_id, :introduction, :url ).merge(user_id: current_user.id)
