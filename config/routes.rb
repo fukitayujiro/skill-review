@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   resources :contents do
     resources :messages
     member do
-      get 'search'
+      get 'genre_search'
+      get 'media_search'
     end
   end
 end
