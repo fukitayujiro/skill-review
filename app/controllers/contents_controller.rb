@@ -49,9 +49,17 @@ class ContentsController < ApplicationController
     redirect_to content_path
   end
 
+  def genre_search
+    @contents = Content.all.order("created_at DESC")
+  end
+
+  def media_search
+    @contents = Content.all.order("created_at DESC")
+  end
+
   private
   def content_params
-    params.require(:content).permit(:image, :title, :media_id, :genre_id, :introduction, :url ).merge(user_id: current_user.id)
+    params.require(:content).permit(:id, :image, :title, :media_id, :genre_id, :introduction, :url ).merge(user_id: current_user.id)
   end
 
   def move_to_index

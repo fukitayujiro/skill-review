@@ -7,25 +7,25 @@
   </div>
   <div class="sidebar__genre">
     <ul class="sidebar__genre--lists">
-      <p class="sidebar__genre--heading">ジャンルから探す(工事中)</p>
-      <%# <li class="sidebar__genre--list">経営</li>
-      <li class="sidebar__genre--list">IT</li>
-      <li class="sidebar__genre--list">自己啓発</li>
-      <li class="sidebar__genre--list">マーケティング</li>
-      <li class="sidebar__genre--list">営業</li>
-      <li class="sidebar__genre--list">その他</li> %>
+      <p class="sidebar__genre--heading">ジャンルから探す</p>
+      <li><%= link_to '経営', genre_search_content_path(2), class: "sidebar__genre--list" %></li>
+      <li><%= link_to 'IT', genre_search_content_path(3), class: "sidebar__genre--list" %></li>
+      <li><%= link_to '自己啓発', genre_search_content_path(4), class: "sidebar__genre--list" %></li>
+      <li><%= link_to 'マーケティング', genre_search_content_path(5), class: "sidebar__genre--list" %></li>
+      <li><%= link_to '営業', genre_search_content_path(6), class: "sidebar__genre--list" %></li>
+      <li><%= link_to 'その他', genre_search_content_path(7), class: "sidebar__genre--list" %></li>
     </ul>
   </div>
   <div class="sidebar__medium">
     <ul class="sidebar__medium--lists">
-      <p class="sidebar__medium--heading">媒体から探す(工事中)</p>
-      <%# <li class="sidebar__medium--list">書籍</li>
-      <li class="sidebar__medium--list">動画</li>
-      <li class="sidebar__medium--list">udemy</li>
-      <li class="sidebar__medium--list">MENTA</li>
-      <li class="sidebar__medium--list">webサービス(無料)</li>
-      <li class="sidebar__medium--list">webサービス(有料)</li>
-      <li class="sidebar__medium--list">その他</li> %>
+      <p class="sidebar__medium--heading">媒体から探す</p>
+      <li><%= link_to '書籍', media_search_content_path(2), class: "sidebar__genre--list" %></li>
+      <li><%= link_to '動画', media_search_content_path(3), class: "sidebar__genre--list" %></li>
+      <li><%= link_to 'Udemy', media_search_content_path(4), class: "sidebar__genre--list" %></li>
+      <li><%= link_to 'MENTA', media_search_content_path(5), class: "sidebar__genre--list" %></li>
+      <li><%= link_to 'Webサービス(無料)', media_search_content_path(6), class: "sidebar__genre--list" %></li>
+      <li><%= link_to 'Webサービス(無料)', media_search_content_path(7), class: "sidebar__genre--list" %></li>
+      <li><%= link_to 'その他', media_search_content_path(8), class: "sidebar__genre--list" %></li>
     </ul>
   </div>
 </div>
