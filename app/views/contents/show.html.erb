@@ -3,19 +3,23 @@
 <%= render 'shared/sidebar' %>
 
 <div class="showcontents">
-  <div class="content_post">
+  <div class="showcontent_post">
     <div class="content_image">
+    <% if @content.image.attached? %>
       <%= image_tag @content.image %>
+    <% else %>
+      <%= image_tag "noimage.png", size: '300x300', class: 'content-image' %>
+    <% end %>
     </div>
-        <ul class="data-lists">
-          <li class="content-title">タイトル：<%= @content.title %></li>
-          <% if @messages.present?%>
-            <li class="content-averagepoint">評価：<%= @aves %></li>
-          <% else %>
-            <li class="content-averagepoint">評価：--</li>
-          <% end %>
-          <li class="content-introduction">紹介文：<%= @content.introduction %></li>
-        </ul>
+    <ul class="data-lists">
+      <li class="content-title">タイトル：<%= @content.title %></li>
+      <% if @messages.present?%>
+        <li class="content-averagepoint">評価：<%= @aves %></li>
+      <% else %>
+        <li class="content-averagepoint">評価：--</li>
+      <% end %>
+      <li class="content-introduction">紹介文：<%= @content.introduction %></li>
+    </ul>
   </div>
   <p class="showcontent__catalog"><strong>口コミ投稿一覧</strong></p>
   <div class="showcomments__views">

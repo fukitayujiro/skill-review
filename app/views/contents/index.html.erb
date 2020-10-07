@@ -5,16 +5,27 @@
       <div class="content_post">
       <%= link_to content_path(content.id), class: "link" do %>
         <% if content.image.attached? %>
-          <%= image_tag content.image.variant(resize:'100x100'), class: 'content-image'if content.image.attached? %>
+          <%= image_tag content.image, class: 'content-image'if content.image.attached? %>
         <% else %>
-          <%= image_tag "noimage.png", size: '100x100', class: 'content-image' %>
+          <%= image_tag "noimage.png", class: 'content-image' %>
         <% end %>
         <div class="data" >
-          <%= content.title %></p>
+          <p><%= content.title %></p>
           <span class="name">評価：4.5</span>
         </div>
       <% end %>
       </div>
     <% end %>
+
+    <% 30.times do %>
+    <div class="content_post">
+      <%= image_tag "noimage.png", class: 'content-image' %>
+      <div class="data" >
+        <p>仮置き(クリック不可)</p>
+        <span class="name">評価：--</span>
+      </div>
+    </div>
+    <% end %>
+
   </div>
 </div>

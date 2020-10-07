@@ -50,8 +50,8 @@
 .contents{
   width: calc(100% - 250px);
   display: flex;
-  flex-direction: column;
-  padding-top: 30px;
+  flex-wrap: wrap;
+  padding: 20px 20px 0;
   text-decoration: none;
   overflow: scroll;
   background-color: rgb(252, 249, 249);
@@ -60,16 +60,26 @@
 .link{
   text-decoration: none;
   color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .content_post{
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50vw;
-  margin: 0 auto 20px;
+  width: calc((100% - 100px) / 4);
   background-color: white;
   border: lightgray 1px solid;
+  height: 170px;
+  margin: 0 20px 20px 0;
+}
+
+.content-image{
+  height: 13vh;
+  width: 8wh;
+  margin-top: 10px;
 }
 
 .data{
