@@ -6,10 +6,14 @@
   width: calc(100vw - 250px);
 }
 
-.content_post{
-  width: 50vw;
+.showcontent_post{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto 20px;
   background-color: white;
   border: lightgray 1px solid;
+  width: 50vw;
 }
 
 .content_image{
