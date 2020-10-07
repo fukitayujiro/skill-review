@@ -9,5 +9,5 @@ Rails.application.routes.draw do
       get 'media_search'
     end
   end
-  resources :users, only: :show
+  resources :users
 end

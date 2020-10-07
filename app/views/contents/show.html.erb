@@ -22,7 +22,7 @@
   <% if @messages %>
     <% @messages.each do |message| %>
       <div class="showcomments__view">
-        <p>名前：<%= message.user.name%></p>
+        <p>名前：<%= link_to message.user.name, user_path(message.id) %></p>
         <p>点数：<%= message.point %></p>
         <p>本文：<%= message.text %></p>
       </div><br>
