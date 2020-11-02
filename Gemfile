@@ -68,3 +68,4 @@ gem 'active_hash'
 gem "aws-sdk-s3", require: false
 gem 'devise'
 gem 'pry-rails'
+gem 'kaminari'
