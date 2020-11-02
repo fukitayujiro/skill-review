@@ -6,4 +6,6 @@ class Content < ApplicationRecord
   belongs_to :user, optional: true
   has_many :messages
 
+  paginates_per 20
+
 end

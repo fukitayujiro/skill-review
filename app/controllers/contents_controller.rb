@@ -2,7 +2,7 @@ class ContentsController < ApplicationController
   before_action :move_to_index, only: [:new]
 
   def index
-    @contents = Content.all.order("created_at DESC")
+    @contents = Content.page(params[:page])
   end
 
   def new
