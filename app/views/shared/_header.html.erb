@@ -7,11 +7,11 @@
     <ul class='lists'>
       <li><%= link_to "コンセプト", "#", class: "concept", id: "1" %></li>
     <% if user_signed_in? %>
-      <li><%= link_to "マイページ", "/users/#{current_user.id}", class: "user-nickname", id: "1" %></li>
-      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout", id: "1" %></li>
+      <li><%= link_to "マイページ", "/users/#{current_user.id}", class: "user-nickname", id: "2" %></li>
+      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout", id: "3" %></li>
     <% else %>
-      <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-      <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+      <li><%= link_to 'ログイン', new_user_session_path, class: "login", id: "4" %></li>
+      <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up", id: "5" %></li>
     <% end %>
     </ul>
   </div>
