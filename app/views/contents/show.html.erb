@@ -4,11 +4,11 @@
 
 <div class="showcontents">
   <div class="showcontent_post">
-    <div class="content_image">
+    <div class="showcontent_image">
     <% if @content.image.attached? %>
-      <%= image_tag @content.image %>
+      <%= image_tag @content.image, class: 'showimage' %>
     <% else %>
-      <%= image_tag "noimage.png", size: '300x300', class: 'content-image' %>
+      <%= image_tag "noimage.png" %>
     <% end %>
     </div>
     <ul class="data-lists">

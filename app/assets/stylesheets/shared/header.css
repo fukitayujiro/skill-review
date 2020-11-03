@@ -65,3 +65,107 @@
   color: #333333;
   margin-right: 5px;
 }
+
+@media (max-width: 1185px) {
+
+  .menu {
+    width: 60%;
+    padding: 30px 40px 20px 20px ;
+  }
+
+  .lists {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+  }
+
+  .concept {
+    text-decoration: none;
+    color: #333333;
+    margin-right: 4px;
+  }
+  
+  .user-nickname {
+    text-decoration: none;
+    color: #333333;
+    margin-right: 4px;
+  }
+  
+  .logout {
+    text-decoration: none;
+    color: #333333;
+    margin-right: 4px;
+  }
+  
+  .login {
+    text-decoration: none;
+    color: #333333;
+    margin-right: 4px;
+  }
+  
+  .sign-up {
+    text-decoration: none;
+    color: #333333;
+    margin-right: 4px;
+  }
+}
+
+
+@media (max-width: 900px) {
+
+  .menu {
+    width: 60%;
+    padding: 30px 0px 20px 20px ;
+  }
+
+  .lists {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .concept {
+    text-decoration: none;
+    color: #333333;
+    margin-right: 4px;
+    display: none;
+  }
+
+  .title {
+    font-size: 40px;
+    font-family: Impact,Charcoal;
+    width: 300px;
+    color: rgb(13, 71, 231);
+    padding: 10px 0 0 20px;
+    text-decoration: none;
+  }
+
+  .explain {
+    display: none;
+  }
+
+  .user-nickname {
+    text-decoration: none;
+    color: #333333;
+    padding-right: 20px;
+  }
+  
+  .logout {
+    text-decoration: none;
+    color: #333333;
+  }
+  
+  .login {
+    text-decoration: none;
+    color: #333333;
+    padding-right: 20px;
+  }
+  
+  .sign-up {
+    text-decoration: none;
+    color: #333333;
+  }
+}
