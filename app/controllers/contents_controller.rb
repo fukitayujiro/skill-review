@@ -5,6 +5,9 @@ class ContentsController < ApplicationController
     @contents = Content.page(params[:page])
   end
 
+  def concept
+  end
+
   def new
     @content = Content.new
   end

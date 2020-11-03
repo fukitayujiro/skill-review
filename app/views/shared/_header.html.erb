@@ -5,7 +5,7 @@
   </div>
   <div class='menu'>
     <ul class='lists'>
-      <li><%= link_to "コンセプト", "#", class: "concept", id: "1" %></li>
+      <li><%= link_to "コンセプト", contents_concept_path, class: "concept", id: "1" %></li>
     <% if user_signed_in? %>
       <li><%= link_to "マイページ", "/users/#{current_user.id}", class: "user-nickname", id: "2" %></li>
       <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout", id: "3" %></li>

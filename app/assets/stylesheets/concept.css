@@ -1,0 +1,9 @@
+.concept__main{
+  width: calc(100vw - 250px);
+  background-color: rgb(252, 249, 249);
+  padding: 40px 0;
+}
+
+.concept__text{
+  text-align: center;
+}
