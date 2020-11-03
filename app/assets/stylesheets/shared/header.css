@@ -117,7 +117,14 @@
 
   .menu {
     width: 60%;
-    padding: 30px 40px 20px 20px ;
+    padding: 30px 0px 20px 20px ;
+  }
+
+  .lists {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
   }
 
   .concept {
@@ -138,5 +145,31 @@
 
   .explain {
     display: none;
+  }
+
+  .user-nickname {
+    text-decoration: none;
+    color: #333333;
+    padding-right: 20px;
+    font-size: 14px;
+  }
+  
+  .logout {
+    text-decoration: none;
+    color: #333333;
+    font-size: 14px;
+  }
+  
+  .login {
+    text-decoration: none;
+    color: #333333;
+    padding-right: 20px;
+    font-size: 14px;
+  }
+  
+  .sign-up {
+    text-decoration: none;
+    color: #333333;
+    font-size: 14px;
   }
 }
