@@ -151,25 +151,21 @@
     text-decoration: none;
     color: #333333;
     padding-right: 20px;
-    font-size: 14px;
   }
   
   .logout {
     text-decoration: none;
     color: #333333;
-    font-size: 14px;
   }
   
   .login {
     text-decoration: none;
     color: #333333;
     padding-right: 20px;
-    font-size: 14px;
   }
   
   .sign-up {
     text-decoration: none;
     color: #333333;
-    font-size: 14px;
   }
 }
