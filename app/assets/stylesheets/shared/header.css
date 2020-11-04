@@ -9,7 +9,7 @@
 }
 
 
-.title {
+.header__title {
   font-size: 40px;
   font-family: Impact,Charcoal;
   width: 800px;
@@ -18,49 +18,49 @@
   text-decoration: none;
 }
 
-.explain{
+.header__title--explain{
   font-size: 15px;
   color: black;
 }
 
-.menu {
+.header__menu {
   width: 45%;
   padding: 30px 40px 20px 200px ;
 }
 
 
-.lists {
+.header__menu--lists {
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: space-around;
 }
 
-.concept {
+.header__menu--lists_concept {
   text-decoration: none;
   color: #333333;
   margin-right: 5px;
 }
 
-.user-nickname {
+.header__menu--lists_user_nickname {
   text-decoration: none;
   color: #333333;
   margin-right: 5px;
 }
 
-.logout {
+.header__menu--lists_logout {
   text-decoration: none;
   color: #333333;
   margin-right: 5px;
 }
 
-.login {
+.header__menu--lists_login {
   text-decoration: none;
   color: #333333;
   margin-right: 5px;
 }
 
-.sign-up {
+.header__menu--lists_sign_up {
   text-decoration: none;
   color: #333333;
   margin-right: 5px;
@@ -68,12 +68,12 @@
 
 @media (max-width: 1185px) {
 
-  .menu {
+  .header__menu {
     width: 60%;
     padding: 30px 40px 20px 20px ;
   }
 
-  .lists {
+  .header__menu--lists {
     margin: 0;
     padding: 0;
     display: flex;
@@ -81,31 +81,31 @@
     width: 90%;
   }
 
-  .concept {
+  .header__menu--lists_concept {
     text-decoration: none;
     color: #333333;
     margin-right: 4px;
   }
   
-  .user-nickname {
+  .header__menu--lists_user_nickname {
     text-decoration: none;
     color: #333333;
     margin-right: 4px;
   }
   
-  .logout {
+  .header__menu--lists_logout {
     text-decoration: none;
     color: #333333;
     margin-right: 4px;
   }
   
-  .login {
+  .header__menu--lists_login {
     text-decoration: none;
     color: #333333;
     margin-right: 4px;
   }
   
-  .sign-up {
+  .header__menu--lists_sign_up {
     text-decoration: none;
     color: #333333;
     margin-right: 4px;
@@ -115,26 +115,7 @@
 
 @media (max-width: 900px) {
 
-  .menu {
-    width: 60%;
-    padding: 30px 0px 20px 20px ;
-  }
-
-  .lists {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .concept {
-    text-decoration: none;
-    color: #333333;
-    margin-right: 4px;
-    display: none;
-  }
-
-  .title {
+  .header__title {
     font-size: 40px;
     font-family: Impact,Charcoal;
     width: 300px;
@@ -143,28 +124,47 @@
     text-decoration: none;
   }
 
-  .explain {
+  .header__title--explain {
     display: none;
   }
 
-  .user-nickname {
+  .header__menu {
+    width: 60%;
+    padding: 30px 0px 20px 20px ;
+  }
+
+  .header__menu--lists {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .header__menu--lists_concept {
+    text-decoration: none;
+    color: #333333;
+    margin-right: 4px;
+    display: none;
+  }
+
+  .header__menu--lists_user_nickname {
     text-decoration: none;
     color: #333333;
     padding-right: 20px;
   }
   
-  .logout {
+  .header__menu--lists_logout {
     text-decoration: none;
     color: #333333;
   }
   
-  .login {
+  .header__menu--lists_login {
     text-decoration: none;
     color: #333333;
     padding-right: 20px;
   }
   
-  .sign-up {
+  .header__menu--lists_sign_up {
     text-decoration: none;
     color: #333333;
   }

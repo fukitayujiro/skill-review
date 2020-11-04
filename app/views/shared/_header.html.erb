@@ -1,17 +1,17 @@
 <header class='header'>
-  <div class='title'>
-    <%= link_to 'SkillUp-Navi', "/", class: 'title' %>
-    <span class='explain'>ビジネススキル総合検索・レビューサイト</span>
+  <div class='header__title'>
+    <%= link_to 'SkillUp-Navi', "/", class: 'header__title' %>
+    <span class='header__title--explain'>ビジネススキル総合検索・レビューサイト</span>
   </div>
-  <div class='menu'>
-    <ul class='lists'>
-      <li><%= link_to "コンセプト", contents_concept_path, class: "concept", id: "1" %></li>
+  <div class='header__menu'>
+    <ul class='header__menu--lists'>
+      <li><%= link_to "コンセプト", contents_concept_path, class: "header__menu--lists_concept", id: "1" %></li>
     <% if user_signed_in? %>
-      <li><%= link_to "マイページ", "/users/#{current_user.id}", class: "user-nickname", id: "2" %></li>
-      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout", id: "3" %></li>
+      <li><%= link_to "マイページ", "/users/#{current_user.id}", class: "header__menu--lists_user_nickname", id: "2" %></li>
+      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "header__menu--lists_logout", id: "3" %></li>
     <% else %>
-      <li><%= link_to 'ログイン', new_user_session_path, class: "login", id: "4" %></li>
-      <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up", id: "5" %></li>
+      <li><%= link_to 'ログイン', new_user_session_path, class: "header__menu--lists_login", id: "4" %></li>
+      <li><%= link_to '新規登録', new_user_registration_path, class: "header__menu--lists_sign_up", id: "5" %></li>
     <% end %>
     </ul>
   </div>
