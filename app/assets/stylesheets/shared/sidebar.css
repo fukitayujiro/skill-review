@@ -1,0 +1,44 @@
+.sidebar{
+  width: 250px;
+  height: 100vh;
+  overflow: scroll;
+  padding: 20px 20px 0 20px;
+}
+
+.sidebar__home{
+  border-bottom: lightgray solid 1px;
+  padding-bottom: 15px;
+}
+
+.sidebar__home--list{
+  text-decoration: none;
+  color: #333333;
+}
+
+.sidebar__genre{
+  padding: 15px 0 ;
+  border-bottom: lightgray solid 1px;
+}
+
+.sidebar__genre--heading{
+  margin-bottom: 10px;
+}
+
+.sidebar__genre--list{
+  padding-left: 10px;
+  text-decoration: none;
+  color: #333333;
+}
+
+.sidebar__medium{
+  padding: 15px 0 ;
+  border-bottom: lightgray solid 1px;
+}
+
+.sidebar__medium--heading{
+  margin-bottom: 10px;
+}
+
+.sidebar__medium--list{
+  padding-left: 10px;
+}
