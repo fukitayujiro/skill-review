@@ -8,4 +8,5 @@ class Content < ApplicationRecord
 
   paginates_per 20
 
+
 end
