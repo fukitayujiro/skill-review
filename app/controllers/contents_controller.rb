@@ -2,7 +2,7 @@ class ContentsController < ApplicationController
   before_action :move_to_index, only: [:new]
 
   def index
-    @contents = Content.page(params[:page])
+    @contents = Content.page(params[:page]).order("created_at DESC")
   end
 
   def concept
@@ -53,11 +53,11 @@ class ContentsController < ApplicationController
   end
 
   def genre_search
-    @contents = Content.all.order("created_at DESC")
+    @contents = Content.page(params[:page]).order("created_at DESC")
   end
 
   def media_search
-    @contents = Content.all.order("created_at DESC")
+    @contents = Content.page(params[:page]).order("created_at DESC")
   end
 
   private
