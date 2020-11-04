@@ -2,27 +2,27 @@
   <%= render "shared/sidebar" %>
   <div class="contents">
     <% @contents.each do |content| %>
-      <div class="content_post">
-      <%= link_to content_path(content.id), class: "link" do %>
+      <div class="content__post">
+      <%= link_to content_path(content.id), class: "content__post--link" do %>
         <% if content.image.attached? %>
-          <%= image_tag content.image, class: 'content-image'if content.image.attached? %>
+          <%= image_tag content.image, class: 'content__post--image'if content.image.attached? %>
         <% else %>
-          <%= image_tag "noimage.png", class: 'content-image' %>
+          <%= image_tag "noimage.png", class: 'content__post--image' %>
         <% end %>
-        <div class="data" >
+        <div class="content__post--data" >
           <p><%= content.title %></p>
-          <span class="name">評価：4.5</span>
+          <span class="content__post--date_name">評価：4.5</span>
         </div>
       <% end %>
       </div>
     <% end %>
 
     <% 30.times do %>
-    <div class="content_post">
-      <%= image_tag "noimage.png", class: 'content-image' %>
+    <div class="content__post">
+      <%= image_tag "noimage.png", class: 'content__post--image' %>
       <div class="data" >
         <p>仮置き(クリック不可)</p>
-        <span class="name">評価：--</span>
+        <span class="content__post--date_name">評価：--</span>
       </div>
     </div>
     <% end %>

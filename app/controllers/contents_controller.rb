@@ -1,8 +1,9 @@
 class ContentsController < ApplicationController
   before_action :move_to_index, only: [:new]
+  before_action :find_all, only: [:index, :genre_search, :media_search]
+  before_action :find_params_id, only: [:show, :edit]
 
   def index
-    @contents = Content.page(params[:page])
   end
 
   def concept
@@ -22,7 +23,6 @@ class ContentsController < ApplicationController
   end
 
   def show
-    @content = Content.find(params[:id])
     @message = Message.new
     @messages = @content.messages.includes(:user)
     array = []
@@ -43,7 +43,6 @@ class ContentsController < ApplicationController
   end
 
   def edit
-    @content = Content.find(params[:id])
   end
 
   def update
@@ -53,11 +52,9 @@ class ContentsController < ApplicationController
   end
 
   def genre_search
-    @contents = Content.all.order("created_at DESC")
   end
 
   def media_search
-    @contents = Content.all.order("created_at DESC")
   end
 
   private
@@ -69,6 +66,14 @@ class ContentsController < ApplicationController
     unless user_signed_in?
       redirect_to root_path
     end
+  end
+
+  def find_all
+    @contents = Content.page(params[:page]).order("created_at DESC")
+  end
+
+  def find_params_id
+    @content = Content.find(params[:id])
   end
   
 end
