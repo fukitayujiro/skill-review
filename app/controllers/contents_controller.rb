@@ -1,8 +1,8 @@
 class ContentsController < ApplicationController
   before_action :move_to_index, only: [:new]
+  before_action :find_all, only: [:index, :genre_search, :media_search]
 
   def index
-    @contents = Content.page(params[:page]).order("created_at DESC")
   end
 
   def concept
@@ -53,11 +53,9 @@ class ContentsController < ApplicationController
   end
 
   def genre_search
-    @contents = Content.page(params[:page]).order("created_at DESC")
   end
 
   def media_search
-    @contents = Content.page(params[:page]).order("created_at DESC")
   end
 
   private
@@ -69,6 +67,10 @@ class ContentsController < ApplicationController
     unless user_signed_in?
       redirect_to root_path
     end
+  end
+
+  def find_all
+    @contents = Content.page(params[:page]).order("created_at DESC")
   end
   
 end
