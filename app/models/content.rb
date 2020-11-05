@@ -8,5 +8,15 @@ class Content < ApplicationRecord
 
   paginates_per 20
 
+  with_options presence: true do
+    validates :title
+    validates :introduction
+    validates :image
+  end
+
+  with_options presence: true, numericality: { other_than: 1 } do
+    validates :media_id
+    validates :genre_id
+  end
 
 end
