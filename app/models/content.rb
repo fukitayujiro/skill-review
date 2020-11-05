@@ -11,7 +11,6 @@ class Content < ApplicationRecord
   with_options presence: true do
     validates :title
     validates :introduction
-    validates :image
   end
 
   with_options presence: true, numericality: { other_than: 1 } do
