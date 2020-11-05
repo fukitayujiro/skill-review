@@ -107,9 +107,7 @@ SNS認証
 | genre   | string | null: false |
 | introduction   | string | null: false |
 | image   | string | null: false |
-| url   | string | null: false |
 | user_id   | references | null: false, foreign_key: true|
-| judge   | integer | null: false |
 
 ### Association
 
