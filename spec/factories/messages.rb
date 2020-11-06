@@ -3,4 +3,5 @@ FactoryBot.define do
     point              {"2"}
     text                {"1111112222233333"}
   end
+
 end
