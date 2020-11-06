@@ -21,12 +21,12 @@ describe Content do
         @content.valid?
         expect(@content.errors.full_messages).to include("Introduction can't be blank")
       end
-      it "item_status_idが1の時" do
+      it "media_idが1の時" do
         @content.media_id = "1"
         @content.valid?
         expect(@content.errors.full_messages).to include("Media must be other than 1")
       end
-      it "item_status_idが1の時" do
+      it "genre_idが1の時" do
         @content.genre_id = "1"
         @content.valid?
         expect(@content.errors.full_messages).to include("Genre must be other than 1")
