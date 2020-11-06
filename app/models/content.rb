@@ -17,5 +17,4 @@ class Content < ApplicationRecord
     validates :media_id
     validates :genre_id
   end
-
 end
