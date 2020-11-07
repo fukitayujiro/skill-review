@@ -25,7 +25,16 @@
   padding: 2vh 0;
 }
 
-.posting__text {
+.posting__form--title {
+  width: 100%;
+  padding: 16px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  resize: none;
+}
+
+.posting__form--intro {
   width: 100%;
   padding: 16px 16px 8px;
   border-radius: 4px;
