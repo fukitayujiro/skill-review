@@ -2,23 +2,23 @@
 
 <%= render "shared/sidebar"%>
 
-<div class="posting-contents">
-  <h2 class="post-title">投稿画面</h2>
+<div class="posting">
+  <h2 class="posting__heading">投稿画面</h2>
   <%= form_with model: @content, url: contents_path, local: true do |f| %>
 
-  <div class="bold-text">
+  <div class="boldtext">
         1.イメージ画像
   </div>
-  <div class="click-upload">
+  <div class="posting__image">
     <%= f.file_field :image, id:"image" %>
   </div>
 
-  <div class="form">
-    <div class="bold-text">
+  <div class="posting__form">
+    <div class="boldtext">
       2.タイトル
       <span class="indispensable">必須</span>
     </div>
-    <%= f.text_area :title, class:"title-text", id:"title-name", placeholder:"タイトル", maxlength:"40" %>
+    <%= f.text_area :title, class:"posting__title", id:"title-name", placeholder:"タイトル", maxlength:"40" %>
     <div class="items-explain">
       <div class="bold-text">
         3.内容の説明

@@ -1,5 +1,5 @@
 
-.posting-contents {
+.posting {
   padding-top: 20px;
   font-size: 14px;
   display: flex;
@@ -9,29 +9,33 @@
   width: calc(100vw - 250px);
 }
 
-.bold-text {
-  font-weight: bold;
-  min-width: 170px;
-  margin-bottom: 10px;
-}
-
-.post-title {
+.posting__heading {
   font-size: 22px;
   font-weight: bold;
   text-align: center;
   margin-bottom: 20px;
 }
 
-/* 共通 */
-.indispensable {
-  background: #ea352d;
-  margin-left: 8px;
-  padding: 3px;
-  border-radius: 2px;
-  color: #fff;
-  font-size: 12px;
-  font-weight: bold;
+.posting__image {
+  margin: 15px 0;
+  min-width: 250px;
 }
+
+.posting__form {
+  padding: 2vh 0;
+}
+
+.posting__text {
+  width: 100%;
+  padding: 16px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  resize: none;
+}
+
+/* 共通 */
+
 
 .select-box {
   height: 30px;
@@ -47,26 +51,10 @@
   padding: 2vh 0;
 }
 
-.click-upload {
-  margin: 15px 0;
-  min-width: 250px;
-}
+
 
 .click-upload>p {
   margin-bottom: 15px;
-}
-
-.form {
-  padding: 2vh 0;
-}
-
-.title-text {
-  width: 100%;
-  padding: 16px 16px 8px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-  resize: none;
 }
 
 
@@ -107,3 +95,4 @@
   box-shadow: 2px 2px 2px;
   border-radius: 15px;
 }
+
