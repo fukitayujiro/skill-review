@@ -43,47 +43,24 @@
   resize: none;
 }
 
-/* 共通 */
-
-
 .select-box {
   height: 30px;
   width: 100%;
   background-color: #f5f5f5;
   padding-left: 20px;
-}
-
-.img-upload {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 2vh 0;
-}
-
-
-
-.click-upload>p {
-  margin-bottom: 15px;
-}
-
-
-
-.items-detail>.form {
-  width: 300px;
-  padding: 2vh 0;
-}
-
-.select-box {
   margin: 2vh 0;
 }
 
-.btn-contents {
+
+.posting__submit {
   width: 100%;
   text-align: center;
   padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
 }
 
-.postbtn {
+.posting__submit--btn {
   background: rgb(13, 71, 231);
   border: 1px solid rgb(13, 71, 231);
   color: #fff;
@@ -95,7 +72,7 @@
   border-radius: 15px;
 }
 
-.back-btn {
+.posting__submit--backbtn {
   background: #aaa;
   border: 1px solid #aaa;
   color: #fff;
