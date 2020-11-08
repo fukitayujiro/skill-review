@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Content do
+RSpec.describe Content, type: :model do
   before do
     @content = FactoryBot.build(:content)
   end

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Message do
+RSpec.describe Message, type: :model do
   before do
     @message = FactoryBot.build(:message)
   end
@@ -11,15 +11,15 @@ describe Message do
       end
     end
     context 'コンテンツ投稿がうまくいかない時' do
-      it "pointが洗濯してください以外の時" do
+      it "pointが選択してください以外の時" do
         @message.point = "1"
-        @content.valid?
+        @message.valid?
         expect(@message.errors.full_messages).to include("Point must be other than 1")
       end
-      it "introductionが空の時" do
-        @content.text = nil
-        @content.valid?
-        expect(@content.errors.full_messages).to include("Text can't be blank")
+      it "textが空の時" do
+        @message.text = nil
+        @message.valid?
+        expect(@message.errors.full_messages).to include("Text can't be blank")
       end
     end
   end
