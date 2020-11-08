@@ -5,5 +5,4 @@ FactoryBot.define do
     user_id              {"2"}
     content_id           {"2"}
   end
-
 end
