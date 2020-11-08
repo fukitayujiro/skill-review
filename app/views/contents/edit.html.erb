@@ -2,27 +2,27 @@
 
 <%= render "shared/sidebar"%>
 
-  <div class="posting">
-    <h2 class="posting__heading">編集画面</h2>
+  <div class="edit">
+    <h2 class="edit__heading">編集画面</h2>
     <%= form_with model: @content, url: content_path, local: true do |f| %>
 
     <div class="boldtext">
         1.イメージ画像
     </div>
-    <div class="posting__image">
+    <div class="edit__image">
       <%= f.file_field :image, id:"image" %>
     </div>
-    <div class="posting__form">
+    <div class="edit__form">
       <div class="boldtext">
         2.タイトル
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :title, class:"posting__form--title", id:"title-name", placeholder:"タイトル", maxlength:"40" %>
+      <%= f.text_area :title, class:"edit__form--title", id:"title-name", placeholder:"タイトル", maxlength:"40" %>
       <div class="boldtext">
         3.内容の説明
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :introduction, class:"posting__form--intro", id:"intro-info", placeholder:"内容の説明（1,000文字まで）身についた内容、良かった点、気になる点、注意点など" ,rows:"7" ,maxlength:"1000" %>
+      <%= f.text_area :introduction, class:"edit__form--intro", id:"intro-info", placeholder:"内容の説明（1,000文字まで）身についた内容、良かった点、気になる点、注意点など" ,rows:"7" ,maxlength:"1000" %>
       <div class="boldtext">
         4.媒体
         <span class="indispensable">必須</span>
@@ -34,9 +34,9 @@
       </div>
       <%= f.collection_select(:genre_id, Genre.all, :id, :name, {class:"select-box", id:"genre"}) %>
     </div>
-    <div class="posting__submit">
-      <%= f.submit "編集する" ,class:"posting__submit--btn" %>
-      <%=link_to 'もどる', root_path, class:"posting__submit--backbtn" %>
+    <div class="edit__submit">
+      <%= f.submit "編集する" ,class:"edit__submit--btn" %>
+      <%=link_to 'もどる', root_path, class:"edit__submit--backbtn" %>
     </div>
 
     <% end %>
