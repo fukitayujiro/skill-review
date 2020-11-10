@@ -35,7 +35,11 @@ RSpec.describe "Contents", type: :system do
   context 'ツイート投稿ができないとき'do
     it 'ログインしていないと新規投稿ページに遷移できない' do
       # トップページに遷移する
-      # 新規投稿ページへのリンクがない
+      visit root_path
+      # 投稿ページに移動する
+      visit new_content_path
+      # トップページに遷移する
+      expect(current_path).to eq root_path
     end
   end
 end
