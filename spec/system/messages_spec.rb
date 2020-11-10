@@ -30,14 +30,12 @@ RSpec.describe "Messages", type: :system do
       expect(page).to have_content(@message_text)
     end
   end
-  context 'ツイート投稿ができないとき'do
-    it 'ログインしていないと新規投稿ページに遷移できない' do
-      # トップページに遷移する
-      visit root_path
-      # 投稿ページに移動する
-      visit new_content_path
-      # トップページに遷移する
-      expect(current_path).to eq root_path
+  context 'コメント投稿ができないとき'do
+    it 'ログインしていないとコメント画面が表示されない' do
+      # 詳細ページへ遷移
+      visit content_path(@content)
+      # フォームに情報を入力する
+      expect(page).to have_content("コメントの投稿には新規登録/ログインが必要です")
     end
   end
 end
