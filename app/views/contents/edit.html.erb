@@ -27,7 +27,7 @@
         4.媒体
         <span class="indispensable">必須</span>
       </div>
-      <%= f.collection_select(:media_id, Medium.all, :id, :name, {class:"select-box", id:"medium"}) %>
+      <%= f.collection_select(:media_id, Medium.all, :id, :name, {class:"edit__form--select-box", id:"medium"}) %>
       <div class="boldtext">
         5.ジャンル
         <span class="indispensable">必須</span>

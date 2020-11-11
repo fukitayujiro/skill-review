@@ -42,7 +42,7 @@
   resize: none;
 }
 
-.select-box {
+.edit__form--select-box {
   height: 30px;
   width: 100%;
   background-color: #f5f5f5;
