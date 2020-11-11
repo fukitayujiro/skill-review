@@ -32,7 +32,7 @@
         5.ジャンル
         <span class="indispensable">必須</span>
       </div>
-      <%= f.collection_select(:genre_id, Genre.all, :id, :name, {class:"select-box", id:"genre"}) %>
+      <%= f.collection_select(:genre_id, Genre.all, :id, :name, {class:"edit__form--select-box", id:"genre"}) %>
     </div>
     <div class="edit__submit">
       <%= f.submit "編集する" ,class:"edit__submit--btn" %>
