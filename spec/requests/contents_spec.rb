@@ -30,6 +30,13 @@ describe ContentsController, type: :request do
     end
   end
 
+  describe "GET #create" do
+    it "createアクションにリクエストすると正常にレスポンスが返ってくる" do 
+    end
+    it "createアクションにリクエストするとレスポンスがトップページのテキストが存在する" do
+    end
+  end
+
   describe "GET #show" do
     it "showアクションにリクエストすると正常にレスポンスが返ってくる" do 
       get content_path(@content)
