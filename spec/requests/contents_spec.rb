@@ -59,5 +59,11 @@ describe ContentsController, type: :request do
     end
   end
 
+  describe "GET #destroy" do
+    it "destroyアクションにリクエストすると正常にレスポンスが返ってくる" do 
+    end
+    it "destroyアクションにリクエストするとレスポンスにトップページのテキストが存在する" do
+    end
+  end
 
 end
