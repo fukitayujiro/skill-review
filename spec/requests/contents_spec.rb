@@ -51,4 +51,13 @@ describe ContentsController, type: :request do
       expect(response.body).to include "口コミ投稿一覧"
     end
   end 
+
+  describe "GET #edit" do
+    it "editアクションにリクエストすると正常にレスポンスが返ってくる" do 
+    end
+    it "editアクションにリクエストするとレスポンスが「編集画面」のテキストが存在する" do
+    end
+  end
+
+
 end
