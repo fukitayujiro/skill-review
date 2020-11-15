@@ -18,13 +18,16 @@ describe ContentsController, type: :request do
 
   describe "GET #show" do
     it "showアクションにリクエストすると正常にレスポンスが返ってくる" do 
+      get content_path(@content)
+      expect(response.status).to eq 200
     end
     it "showアクションにリクエストするとレスポンスに投稿済みのツイートのテキストが存在する" do 
+      get content_path(@content)
+      expect(response.body).to include @content.title
     end
-    it "showアクションにリクエストするとレスポンスに投稿済みのツイートの画像URLが存在する" do 
-    end
-    it "showアクションにリクエストするとレスポンスにコメント一覧表示部分が存在する" do 
+    it "showアクションにリクエストするとレスポンスに「口コミ投稿一覧」のテキストが存在する" do 
+      get content_path(@content)
+      expect(response.body).to include "口コミ投稿一覧"
     end
   end 
-
 end
