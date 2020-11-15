@@ -80,4 +80,11 @@ describe ContentsController, type: :request do
     end
   end
 
+  describe "GET #media_search" do
+    it "media_searchアクションにリクエストすると正常にレスポンスが返ってくる" do 
+    end
+    it "media_searchアクションにリクエストするとレスポンスに〜テキストが存在する" do
+    end
+  end
+
 end
