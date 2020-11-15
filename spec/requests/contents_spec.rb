@@ -16,10 +16,17 @@ describe ContentsController, type: :request do
     end
   end
 
+  describe "GET #concept" do
+    it "conceptアクションにリクエストすると正常にレスポンスが返ってくる" do 
+    end
+    it "conceptアクションにリクエストするとレスポンスに〜のテキストが存在する" do
+    end
+  end
+
   describe "GET #new" do
     it "newアクションにリクエストすると正常にレスポンスが返ってくる" do 
     end
-    it "indexアクションにリクエストするとレスポンスに投稿済みのツイートのテキストが存在する" do
+    it "newアクションにリクエストするとレスポンスに「投稿画面」のテキストが存在する" do
     end
   end
 
