@@ -59,10 +59,24 @@ describe ContentsController, type: :request do
     end
   end
 
+  describe "GET #update" do
+    it "updateアクションにリクエストすると正常にレスポンスが返ってくる" do 
+    end
+    it "updateアクションにリクエストするとレスポンスにトップページのテキストが存在する" do
+    end
+  end
+
   describe "GET #destroy" do
     it "destroyアクションにリクエストすると正常にレスポンスが返ってくる" do 
     end
     it "destroyアクションにリクエストするとレスポンスにトップページのテキストが存在する" do
+    end
+  end
+
+  describe "GET #genre_search" do
+    it "genre_searchアクションにリクエストすると正常にレスポンスが返ってくる" do 
+    end
+    it "genre_searchアクションにリクエストするとレスポンスに〜テキストが存在する" do
     end
   end
 
