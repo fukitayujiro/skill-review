@@ -33,3 +33,108 @@
   font-size: 12px;
   font-weight: bold;
 }
+
+/* contents,content~はindex,searchで共通 */
+.contents{
+  width: calc(100% - 250px);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 20px 0;
+  text-decoration: none;
+  overflow: scroll;
+  background-color: rgb(252, 249, 249);
+}
+
+.content__post--link{
+  text-decoration: none;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content__post{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc((100% - 100px) / 4);
+  background-color: white;
+  border: lightgray 1px solid;
+  height: 160px;
+  margin: 0 20px 20px 0;
+}
+
+.content__post--image{
+  height: 10vh;
+  width: 8wh;
+  margin-top: 10px;
+}
+
+.content__post--data{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 1185px) {
+  .content__post{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc((100% - 80px) / 3);
+    background-color: white;
+    border: lightgray 1px solid;
+    height: 145px;
+    margin: 0 20px 20px 0;
+  }
+
+  .content__post--data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 900px) {
+
+  .contents{
+    width: calc(100% - 180px);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 20px 0;
+    text-decoration: none;
+    overflow: scroll;
+    background-color: rgb(252, 249, 249);
+  }
+
+  .content__post{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc((100% - 80px) / 2);
+    background-color: white;
+    border: lightgray 1px solid;
+    height: 120px;
+    margin: 0 20px 20px 0;
+  }
+
+  .content__post--image{
+    height: 6vh;
+    width: 6wh;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .content__post{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc((100% - 80px) / 1);
+    background-color: white;
+    border: lightgray 1px solid;
+    height: 100px;
+    margin: 0 20px 20px 0;
+  }
+}
