@@ -1,14 +1,18 @@
 <div class="wrapper">
   <%= render "shared/sidebar" %>
   <div class="contents">
-    <% @contents.each do |s| %>
-      <% if params[:id].to_i == s.genre_id %>
-      <div class="content_post">
-      <%= link_to content_path(s.id), class: "link" do %>
-        <%= image_tag s.image.variant(resize:'300x300'), class: 'content-image' if s.image.attached? %>
-        <div class="data" >
-          <%= s.title %></p>
-          <span class="name">評価：4.5</span>
+    <% @contents.each do |content| %>
+      <% if params[:id].to_i == content.genre_id %>
+      <div class="content__post">
+      <%= link_to content_path(content.id), class: "content__post--link" do %>
+        <% if content.image.attached? %>
+          <%= image_tag content.image, class: 'content__post--image'if content.image.attached? %>
+        <% else %>
+          <%= image_tag "noimage.png", class: 'content__post--image' %>
+        <% end %>
+        <div class="content__post--data" >
+          <%= content.title %></p>
+          <span class="content__post--name">評価：4.5</span>
         </div>
       <% end %>
       </div>
