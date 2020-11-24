@@ -4,8 +4,7 @@ class CreateContents < ActiveRecord::Migration[6.0]
       t.string :title
       t.integer :media_id
       t.integer :genre_id
-      t.string :url
-      t.integer :user_id
+      t.text :introduction
       t.timestamps
     end
   end
