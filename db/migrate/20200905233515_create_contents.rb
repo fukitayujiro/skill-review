@@ -4,10 +4,8 @@ class CreateContents < ActiveRecord::Migration[6.0]
       t.string :title
       t.integer :media_id
       t.integer :genre_id
-      t.string :introduction
       t.string :url
       t.references :user,  foreign_key: true
-      t.integer :judge
       t.timestamps
     end
   end
