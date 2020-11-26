@@ -38,8 +38,10 @@ ActiveRecord::Schema.define(version: 2020_09_23_085530) do
     t.integer "media_id"
     t.integer "genre_id"
     t.string "introduction"
+    t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_contents_on_user_id"
   end
 
   create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -67,4 +69,7 @@ ActiveRecord::Schema.define(version: 2020_09_23_085530) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "contents", "users"
+  add_foreign_key "messages", "contents"
+  add_foreign_key "messages", "users"
 end
