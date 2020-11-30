@@ -24,7 +24,7 @@ SkillUp-Navi
 総合的に情報収集できるレビューサイトがあれば、それらの解消の一助になると思い作成しています。
 
 # 使用技術
-HTML/CSS, Ruby, Ruby on Rails, JavaScript, AWS(EC2/S3), SQL, GitHub
+HTML/CSS, Ruby, Ruby on Rails, JavaScript, AWS(EC2/S3/RDS), SQL, GitHub
 
 # 利用方法
 ビジネススキルの習得を目的としたユーザーのために、そのためのサービス等を利用する際の判断材料としてご利用頂きます。
